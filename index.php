@@ -12,7 +12,17 @@ necessitatibus sit laborum? Quisquam, beatae.
 Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
 Exercitationem rerum, labore sequi alias reprehenderit 
 nihil earum voluptatum quis quia quidem fuga commodi velit quod doloremque 
+necessitatibus sit laborum? Quisquam, beatae.
+Lorem ipsum dolor sit, amet consectetur adipisicing elit. 
+Exercitationem rerum, labore sequi alias reprehenderit 
+nihil earum voluptatum quis quia quidem fuga commodi velit quod doloremque 
 necessitatibus sit laborum? Quisquam, beatae.';
+
+//variabile per prelevare il valore del get "parola"
+$searchWord = $_GET["word"];
+
+//variabile per sostituire il valore preso dal get con (***)
+$censorWord = str_replace($searchWord, '***', $paragraph);
 ?>
 
 
@@ -29,6 +39,10 @@ necessitatibus sit laborum? Quisquam, beatae.';
 <body>
     <p> <?php echo $paragraph ?> </p>
     <span>La lunghezza del paragrafo è <?php echo strlen($paragraph) ?> caratteri</span>
+    <hr>
+    <!-- Sostituzione del valore get con (***) -->
+    <p><?php echo $censorWord ?></p>
+    <span>La lunghezza del paragrafo è <?php echo strlen($censorWord) ?> caratteri</span>
 </body>
 
 </html>
